@@ -13,7 +13,7 @@ import {
 } from "./Icons";
 import { Variants, motion } from "framer-motion";
 
-const iconVariant: Variants = {
+export const iconVariant: Variants = {
   offscreen: {
     y: 300
   },

@@ -32,21 +32,21 @@ const Navbar = () => {
 
 
       <nav className="flex items-center justify-center">
-        <motion.a href="https://github.com" target={"_blank"} className="mx-4 w-8"
+        <motion.a href="https://github.com/dhafinn" target={"_blank"} className="mx-4 w-8"
         whileHover={{y:-2}}
         whileTap={{scale:0.9}}>
             <GithubIcon />
         </motion.a>
-        <motion.a href="https://linkedin.com" target={"_blank"} className="mx-4 w-8"
+        <motion.a href="https://linkedin.com/in/dhafin-raditya " target={"_blank"} className="mx-4 w-8"
         whileHover={{y:-2}}
         whileTap={{scale:0.9}}>
             <LinkedInIcon />
         </motion.a>
       </nav>
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+      {/* <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
-      </div>
+      </div> */}
     </header>
   );
 };

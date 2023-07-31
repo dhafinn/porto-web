@@ -1,4 +1,9 @@
+import { motion } from 'framer-motion'
 import React from 'react'
+import { iconVariant } from './Skills'
+import pacilpng  from "../../public/images/compsci ui.png"
+import Image from 'next/image'
+
 
 type Props = {}
 
@@ -16,18 +21,27 @@ const Detail = ({study, degree, year, description}) => {
 
 const Education = () => {
   return (
-    <div>
-        <div className='flex items-center justify-center text-6xl font-bold pb-10'>Education</div>
+    <motion.div
+    variants={iconVariant}
+    className="card-container"
+    initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ once: true }}>
+        <div className='flex flex-col items-center justify-center text-6xl font-bold pb-10'>
+          <h1 className='mb-20'>Education</h1>
+          <Image src={pacilpng} alt="pacilpng" className='flex row items-center justify-center w-[40%] h-[40%] rounded-2xl'/>
+        </div>
         <div className='w-[75%] mx-auto relative'>
 
-          <ul className='w-full flex flex-col items-start justify-between ml-4'>
+          <ul className='w-full flex flex-col items-start justify-between'>
+          
             <Detail study="Universitas Indonesia" 
             degree="Bachelor Of Science In Computer Science" 
             year= "2021 - Present"
-            description="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."/>
+            description="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Software Engineering."/>
           </ul>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
