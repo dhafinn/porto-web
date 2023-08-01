@@ -2,8 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
-import { GithubIcon, LinkedInIcon } from "./Icons";
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons";
 import {motion} from "framer-motion"
+import useThemeChanger from "../components/hook/useThemeChanger"
 
 const CustomLink = ({href, title, className=""}) => {
 
@@ -12,7 +13,7 @@ const CustomLink = ({href, title, className=""}) => {
         <Link href={href} className={`${className} relative group`}>
             {title}
             
-            <span className={`h-[2px] inline-block bg-black
+            <span className={`h-[2px] inline-block bg-black dark:bg-light 
             absolute left-0 -bottom-0.5 
             group-hover:w-full transition-[width] ease duration-300 
             ${router.asPath === href ? 'w-full' : 'w-0'}`}>
@@ -22,8 +23,10 @@ const CustomLink = ({href, title, className=""}) => {
 }
 
 const Navbar = () => {
+  const [mode, setMode] = useThemeChanger();
+
   return (
-    <header className="flex items-center justify-between px-32 py-8 font-bold">
+    <header className="flex items-center justify-between px-32 py-8 font-bold dark:text-light ">
       <nav>
         <CustomLink href="/" title="Home" className="mx-2"/>
         <CustomLink href="/projects" title="Projects" className="mx-2"/>
@@ -42,11 +45,21 @@ const Navbar = () => {
         whileTap={{scale:0.9}}>
             <LinkedInIcon />
         </motion.a>
-      </nav>
 
-      {/* <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
-      </div> */}
+        <motion.button
+          onClick={() => setMode(mode==="dark" ? "light" : "dark")}
+          className="mx-4 w-8"
+          whileHover={{y:-2}}
+          whileTap={{scale:0.9}}
+          >
+            {
+              mode === "dark" ?
+              <MoonIcon className="fill-yellow-300 stroke-yellow-300" /> :
+              <SunIcon className="fill-yellow-300"/> 
+            }
+        </motion.button>
+      </nav>
+      
     </header>
   );
 };

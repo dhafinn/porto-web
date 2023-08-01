@@ -12,7 +12,7 @@ const Detail = ({study, degree, year, description}) => {
   <li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
     <div>
       <h3 className='capitalize text-2xl font-bold'>{degree}</h3>
-      <span className='capitalize font-medium text-dark/75'>{year} | {study}</span>
+      <span className='capitalize font-medium text-dark/75 dark:text-light/75 '>{year} | {study}</span>
       <p className='font-medium w-full'>{description}</p>
     </div>
   </li>)
@@ -29,7 +29,7 @@ const Education = () => {
     viewport={{ once: true }}>
         <div className='flex flex-col items-center justify-center text-6xl font-bold pb-10'>
           <h1 className='mb-20'>Education</h1>
-          <Image src={pacilpng} alt="pacilpng" className='flex row items-center justify-center w-[40%] h-[40%] rounded-2xl'/>
+          <Image src={pacilpng} alt="pacilpng" className='flex row items-center justify-center w-[40%] h-[40%] rounded-2xl dark:bg-light dark:p-5'/>
         </div>
         <div className='w-[75%] mx-auto relative'>
 

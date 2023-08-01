@@ -6,7 +6,7 @@ type Props = {
 
 const Layout= ({children, className}) => {
   return (
-    <div className={`${className} w-full h-full inline-block bg-light p-32`}>
+    <div className={`${className} w-full h-full inline-block bg-light dark:bg-dark dark:text-light p-32 `}>
         {children}
     </div>
   )

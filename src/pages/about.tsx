@@ -45,7 +45,7 @@ const about = () => {
           <AnimatedText text="about me!" className="mb-10 normal-case"/>
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 Biography
               </h2>
               <p className="text-medium">
@@ -74,13 +74,13 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumber value={10} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">projects</h2>
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">projects</h2>
               </div>
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumber value={2} />+
               </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 text-right">years of experience</h2>
+                <h2 className="text-xl font-medium capitalize text-dark/75 text-right dark:text-light/75">years of experience</h2>
               </div>
 
             </div>

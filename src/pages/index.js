@@ -19,8 +19,8 @@ export default function Home() {
         <meta name="home" content="home"></meta>
       </Head>
       
-      <main className={`flex items-center text-dark w-full min-h-screen justify-center`}>
-        <Layout className="w-[70%] items-center">
+      <main className={`flex items-center text-dark dark:text-light w-full min-h-screen justify-center`}>
+        <Layout className="w-[65%] items-center">
           <div className='w-full'>
             
             <div className='font-bold mb-2 flex flex-col items-center self-center '>
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
           </div>
           <div className='flex items-center self-start mt-5'>
-            <Link href="/Resume.pdf" target={"_blank"} className='flex items-center bg-black text-light text-lg font-semibold p-2.5 px-4 rounded-xl
+            <Link href="/Resume.pdf" target={"_blank"} className='flex items-center bg-black text-light dark:bg-light dark:text-dark text-lg font-semibold p-2.5 px-4 rounded-xl
             hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark
             transition duration-300'>
               Resume <LinkArrow className={"w-6 ml-1"}/>

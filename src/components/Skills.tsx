@@ -64,7 +64,8 @@ const Skills = () => {
         <div className="flex items-center justify-around pt-5">
           <AnimatedIcon icon={<JavascriptIcon></JavascriptIcon>}/>
           <AnimatedIcon icon={<NestIcon></NestIcon>}/>
-          <AnimatedIcon icon={<NextIcon></NextIcon>}/>
+          <AnimatedIcon icon={<div className="dark:bg-light rounded-full">
+            <NextIcon></NextIcon></div>}/>
           <AnimatedIcon icon={<TailwindIcon></TailwindIcon>}/>
           <AnimatedIcon icon={<PostgresIcon></PostgresIcon>}/>  
         </div>
